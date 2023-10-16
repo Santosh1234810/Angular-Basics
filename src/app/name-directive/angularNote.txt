@@ -1,0 +1,45 @@
+3/4/23
+third party libraries and softwares are installed in node_module.
+
+*Data binding: getting data from ts file to html and vise versa.
+
+1. Interpolation {{}}: ts => html // here we display property value.
+2. property binding[]: ts => html // here we set attribute balue.
+3. event binding (): html => ts // here we use event provider by angular.
+4. Two-way data-binding[()]: ts <=> html
+
+*Directive: it is used to changed DOM elements layout as well as change appearance and behaviour of it.
+-here we have three types of Directive
+1. structural Directive: it is use to change dom elements layout.
+                        -it is denoted by * sybmol.
+                        -we can apply single Directive to single element at a time.
+                        -*ngIf, *ngFor, *ngSwitchCase.
+
+ng-template: it display output conditionlly.
+2. attribute Directive: 
+
+3. custome Directive
+
+*How to use bootstrap in angular?
+step-1: install bootstrap.
+    npm i boostrap --save
+
+step-2: go to 
+
+
+*Routing in Angular
+-if you want to get output or view of component by writing its path name in browser url for path that we use routing.
+-All routing components will display output below router-outlet directory
+
+1. naming routing: it will display component view by writing its path name in browser url
+2.default routing: it will display component view by default.
+                 -in this path name willm be blank.
+
+3. redirect routing: redirecting component output.
+
+4. paramterize routing: 
+
+3. wild-card: 
+
+5. child routing: one routing inside another routing.
+

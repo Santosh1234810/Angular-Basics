@@ -1,0 +1,91 @@
+{
+  "employee": [
+    {
+      "id": 101,
+      "name": "Sanjay W",
+      "post": "Angular Developer",
+      "salary": "600000",
+      "address": "Delhi"
+    },
+    {
+      "name": "Santosh",
+      "post": "java developer",
+      "salary": "75000",
+      "address": "Pune",
+      "id": 106
+    },
+    {
+      "name": "Miss Sumedha",
+      "post": "Backend Manager",
+      "salary": "120000",
+      "address": "Ambajogai",
+      "id": 108
+    },
+    {
+      "name": "Pooja",
+      "post": "java developer",
+      "salary": "150000",
+      "address": "Pune",
+      "id": 109
+    },
+    {
+      "id": 111,
+      "name": "Vikram",
+      "post": "HR",
+      "salary": "12345",
+      "address": "Beed"
+    },
+    {
+      "name": "Anil",
+      "post": "Java Developer",
+      "salary": "75000",
+      "address": "Mumbai",
+      "id": 112
+    },
+    {
+      "name": "Vijay",
+      "post": "Quality Analyst ",
+      "salary": "12345",
+      "address": "Satara",
+      "id": 113
+    },
+    {
+      "name": "Yogesh",
+      "post": "java developer",
+      "salary": "120000",
+      "address": "Sangli",
+      "id": 114
+    },
+    {
+      "name": "Suyog",
+      "post": "Quality Analyst ",
+      "salary": "120000",
+      "address": "Kolhapur",
+      "id": 115
+    },
+    {
+      "name": "Prasad",
+      "post": "Java Developer",
+      "salary": "120000",
+      "address": "Nashik",
+      "id": 116
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "uid": "Admin",
+      "upass": "admin@123"
+    },
+    {
+      "id": 1,
+      "uid": "hero",
+      "upass": "hero@123"
+    },
+    {
+      "id": 1,
+      "uid": "zero",
+      "upass": "zero@123"
+    }
+  ]
+}

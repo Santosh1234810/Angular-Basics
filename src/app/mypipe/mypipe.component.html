@@ -1,0 +1,47 @@
+<p>mypipe works!</p>
+<div>{{msg}}</div>
+<!-- string pipe -->
+<div>{{msg |  uppercase}}</div>
+<div>{{msg | lowercase}}</div>
+<div>{{msg | titlecase}}</div>
+<div>{{msg | slice:5}}</div>
+<div>{{msg | slice:5:10}}</div>
+
+{{emp | json}}
+<hr>
+<div>{{0.789 | number}}</div>
+<div>{{0.789 | number:'3.4-5'}}</div>
+<div>{{0.789 | number:'3.1-2'}}</div>
+
+<!-- currency pipe -->
+<div>{{100}}</div>
+<div>{{100 | currency}}</div>
+<div>{{100 | currency: 'GBP'}}</div>
+<div>{{100 | currency: 'INR'}}</div>
+
+<!-- date pipe -->
+<div>{{d}}</div>
+<div>{{d | date:'shortDate'}}</div>
+<div>{{d | date:'longDate'}}</div>
+<!-- <div>{{d | date:''}}</div> -->
+<hr>
+<h2>{{8|sqaure}}</h2>
+<hr>
+<div>
+    <table class="table table-hover table-striped table-bordered text-center bg='success'">
+        <thead>
+            <th>Id</th><th>Name</th><th>Post</th><th>Salary</th><th>Address</th><th>Gender</th>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let emp of employee">
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.post}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.address}}</td>
+                <td>{{emp.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,19 @@
+<p>rtf works!</p>
+
+<form [formGroup]="frmGroup" (ngSubmit)="getData(frmGroup.value)">
+    <div class="form-group">
+        <label class="form-label">Enter User Name</label>
+        <input type="text" name="uname" formControlName="uname" class="form-control">
+        <div class="alert alert-danger" *ngIf="frmGroup.get('uname').invalid && frmGroup.get('uname').touched">
+           <div *ngIf="frmGroup.get('uname').errors.required">This field is required.</div> 
+           <div *ngIf="frmGroup.get('uname').errors.pattern">User Name must contain only characters min-3 amd max-20</div>
+        </div>
+        <div class="form-group-check">
+            <label class="form-check-label">
+            <input type="checkbox" name="term" formControlName="term" value="agree" class="form-input-check"> *I Agree terms and conditions</label>
+            <div class="alert alert-danger" *ngIf="frmGroup.get('term').invalid && frmGroup.get('term').touched">
+                <div *ngIf="frmGroup.get('term').errors.required">This field is required</div> 
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+

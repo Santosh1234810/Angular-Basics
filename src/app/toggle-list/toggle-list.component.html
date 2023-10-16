@@ -1,0 +1,25 @@
+<hr>
+<p>toggle-list works!</p>
+<button type="button" (click)="getCar()" btn-btn>Car List</button>&nbsp;
+<button type="button" (click)="getBike()">Bike List</button>
+
+<div *ngIf="isVal;then refCar; else refBike"></div>
+
+<ng-template #refCar>
+<ul>
+    <li *ngFor="let car of Car" (click)="selectedItem(car)">{{car}}</li>
+</ul>
+</ng-template>
+
+<ng-template #refBike>
+    <ul>
+        
+        <li *ngFor="let bike of Bike" (click)="selectedItem(bike)">{{bike}}</li><br>
+    </ul>
+</ng-template>
+<hr>
+<div [ngSwitch]="myChoice">
+<div *ngFor = "let m of mix">
+    <div *ngSwitchCase="m">You have selected {{m}}</div>
+</div>
+</div>

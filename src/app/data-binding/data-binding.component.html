@@ -1,0 +1,21 @@
+<p>data-binding works!</p>
+<!-- use of interpolation -->
+<h2>{{msg}}</h2>
+
+<!-- property binding -->
+<img [src]="imgPath" alt="" class="myimage" height="300px" width="300px"><br>
+
+<!-- event binding -->
+<button type="button" (click)="greeting('Symbiosis')">Click here</button><br>
+
+<button type="button" (click)="company('Facebook')">Click Here</button>
+<hr>
+<input type="text" name="myitems" [(ngModel)]="items">{{items}}
+<br><br>
+
+<!-- use of reference varibale -->
+<form>
+    <label for="">Enter your data: </label>
+    <input type="text" name="myData" #refData>
+    <button type="button" (click)="getData(refData.value)">Send</button>
+</form>

@@ -1,0 +1,24 @@
+<p>utdf works!</p>
+
+<form #utdf="ngForm" (ngSubmit)="getData(utdf.value)">
+    <div class="form-group">
+        <label class="form-label">Enter User Name</label>
+        <input type="text" name="uname" #refname="ngModel" pattern="[a-zA-Z ]{3,20}" class="form-control" ngModel
+        required>
+        <div class="alert alert-danger" *ngIf="refname.invalid && refname.touched">
+            <div *ngIf="refname.hasError('required')"> this field is required</div>
+            <div *ngIf="refname.hasError('pattern')"> name field must contain only character min-3 and max-20</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Enter User Password</label>
+        <input type="text" name="upass" #refpass="ngModel" pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}" class="form-control" ngModel
+            required>
+        <div class="alert alert-danger" *ngIf="refpass.invalid && refpass.touched">
+            <div *ngIf="refpass.hasError('required')"> this field is required</div>
+            <div *ngIf="refpass.hasError('pattern')">password must contain min-8 character with special symbol</div>
+        </div>
+    </div>
+    <!-- {{refname.className}} <br> -->
+    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+</form>

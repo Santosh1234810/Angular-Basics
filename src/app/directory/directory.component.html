@@ -1,0 +1,37 @@
+<h1 class="cls2">directory works!</h1>
+<h2 *ngIf="isCond">This is *ngIf Directive</h2>
+
+<div *ngIf="isVal;then refTrue;else refFalse"></div>
+<ng-template #refTrue>
+    <p>This is true block</p>
+</ng-template>
+
+<ng-template #refFalse>
+    <p>This is false block</p>
+</ng-template>
+<hr>
+
+<!-- use of *ngFor -->
+<ul>
+    <li *ngFor="let car of cars">{{car}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let c of country">{{c}}</li>
+</ul>
+<hr>
+
+<!-- use of ngSwitch -->
+<div [ngSwitch] = "myChoice">
+    <!-- <div *ngSwitchCase="'Tata'">You have selected Tata</div>
+    <div *ngSwitchCase="'BMW'">You have selected BMW</div>
+    <div *ngSwitchCase="'Mercedese'">You have selected Mercedese</div>
+    <div *ngSwitchCase="'Maruti'">You have selected Maruti</div>
+    <div *ngSwitchCase="'Audi'">You have selected Audi</div>
+    <div *ngSwitchDefault="'Mercedese'">You have selected Mercedese</div> -->
+
+    <div *ngFor="let car of cars">
+        <div *ngSwitchCase="car">You have selected {{car}}</div>
+    </div>
+    <div *ngSwitchDefault>You have selected invalid choice</div>
+</div>

@@ -1,0 +1,62 @@
+<p>dashboard works!</p>
+
+<div class="row">
+    <div class="col-sm-8">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-info btn-sm" routerLink="add">Add &nbsp;<i class="fa fa-plus" aria-hidden="true"></i></button><br><br>
+    </div>
+    <div class="col-sm-8">
+     &nbsp;<input type="text" [(ngModel)]="term" placeholder="Search">
+    </div><br><br>
+</div>
+<table class="table table-hover table-striped table-bordered text-center">
+    <thead>
+        <tr style="background-color: springgreen;">
+            <th>Emp Id</th><th>Name</th><th>Post</th><th>Salary</th><th>Address</th><th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let e of emp |filter:term | paginate: { itemsPerPage: 5, currentPage: p}">
+        
+                <td>{{e.id}}</td>
+                <td>{{e.name}}</td>
+                <td>{{e.post}}</td>
+                <td>{{e.salary}}</td>
+                <td>{{e.address}}</td>
+            
+            <td>
+                <button type="button" class="btn btn-info btn-info btn-sm" (click)="openModal(template)">View &nbsp;<i class="fa fa-eye" aria-hidden="true"></i></button>
+                &nbsp;<button type="button" class="btn btn-info btn-sm" [routerLink]="['/crud/edit',e.id]">Edit &nbsp;<i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>&nbsp;
+                <button type="button" class="btn btn-danger btn-sm" (click)="getId(e.id)">Delete &nbsp;<i class="fa fa-trash" aria-hidden="true"></i></button>
+            </td>
+            <ng-template #template>
+                <div class="modal-header">
+                  <h4 class="modal-title pull-left">{{e.name}}</h4>
+                  <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+                    <span aria-hidden="true" class="visually-hidden">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <table>
+                    <tr>
+                        <td>Id: </td><td>{{e.id}}</td>
+                    </tr>
+                    <tr>
+                        <td>Name: </td><td>{{e.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Post: </td><td>{{e.post}}</td>
+                    </tr>
+                    <tr>
+                        <td>Salary: </td><td>{{e.salary}}</td>
+                    </tr>
+                    <tr>
+                        <td>Address: </td><td>{{e.address}}</td>
+                    </tr>
+                  </table>
+                </div>
+              </ng-template>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls  style="float: right;"(pageChange)="p = $event"></pagination-controls>

@@ -1,0 +1,15 @@
+<p>toggle-image works!</p>
+
+<!-- *ngIf = "isImage1",
+*ngIf = "isImage2" -->
+<div class="myimage">
+        <div style="text-align: center;">
+
+            <img [src]="imgPath" [alt]="imgName" height="300px" width="350px" name="myImage1" id="showimg1">
+            <h3>{{imgName}}</h3>
+
+            <button type="button" (click)="getImage()" class="btn btn-warning btn-sm">Toggle Button</button>
+    
+
+    </div>
+
